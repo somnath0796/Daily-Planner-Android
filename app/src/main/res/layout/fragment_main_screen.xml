@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.awesome.d_planner.MainScreen">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Today Tasks"
+        android:id="@+id/task_label_mainscr"
+        android:layout_alignParentStart="true"
+
+        android:textColor="@color/abc_search_url_text_selected" />
+
+    <ListView
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:id="@+id/remind_list"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/reminder_label_mainscr"
+        android:layout_alignStart="@+id/task_list" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:id="@+id/progressEfficient"
+        android:animationResolution="@android:integer/config_mediumAnimTime"
+        android:progressTint="@android:color/holo_green_light"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/efficiencyLabel"
+        android:layout_alignParentEnd="true"
+        android:progressBackgroundTint="@android:color/secondary_text_dark_nodisable" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/efficient_bar_title"
+        android:id="@+id/efficiencyLabel"
+        android:textColor="@color/abc_search_url_text_selected"
+        android:layout_marginTop="43dp"
+        android:layout_alignTop="@+id/task_list"
+        android:layout_alignStart="@+id/progressEfficient" />
+
+    <ListView
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:id="@+id/task_list"
+        android:layout_below="@+id/task_label_mainscr"
+        android:layout_toEndOf="@+id/section_label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Today&apos;s Reminders"
+        android:id="@+id/reminder_label_mainscr"
+        android:textColor="@color/abc_search_url_text_selected"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

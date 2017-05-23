@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/remindListIcon"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/calendar"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/remindlist"
+        android:tint="@android:color/holo_green_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Reminders"
+        android:id="@+id/remindFragmentTitle"
+        android:textSize="30dp"
+        android:layout_alignBottom="@+id/remindListIcon"
+        android:layout_toEndOf="@+id/remindListIcon"
+        android:layout_margin="5dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addRemindButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="end|bottom"
+        android:src="@android:drawable/ic_input_add"
+
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:tint="@android:color/white"
+        android:contentDescription="Add Task"
+
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="72dp"
+        app:backgroundTint="@color/common_signin_btn_default_background"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:id="@+id/remindlist"
+        android:choiceMode="singleChoice"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/addRemindButton"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

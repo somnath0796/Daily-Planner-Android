@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Notes"
+        android:id="@+id/textView4"
+        android:textColor="@color/secondary_text_default_material_light"
+        android:layout_marginLeft="5dp"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/note_icon"
+        android:layout_toEndOf="@+id/note_icon" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/notes_list"
+        android:textAlignment="center"
+        android:textFilterEnabled="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addNoteButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="end|bottom"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#1114ee"
+
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:tint="@android:color/white"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="72dp"
+        android:contentDescription="Add Note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/notes_list" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/note_icon"
+        android:contentDescription="@string/note_icon_desc"
+        android:src="@drawable/note_icon"
+        android:tint="#ebd003"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/notes_list" />
+
+</RelativeLayout>
